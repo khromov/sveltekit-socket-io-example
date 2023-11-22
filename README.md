@@ -1,38 +1,23 @@
-# create-svelte
+# sveltekit-socket-io-example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A SvelteKit implementation of the [Getting started chat tutorial on the Socket.io website](https://socket.io/get-started/chat) chat.
 
-## Creating a project
+### Start
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```
+nvm use
+npm i
+npm run server
 ```
 
-## Developing
+![Demo](./files/recording.gif)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Differences vs Socket.io demo
 
-```bash
-npm run dev
+The difference between this demo and the Socket.io one is that this demo sends messages through SvelteKit Form Actions. This allows you to do things such as validate messages on the server side or reject them altogether before emitting them.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+![Graph](https://docs.google.com/drawings/d/e/2PACX-1vReOydmfGsqdOgKXOXBAEMWTkisGGIk5YMrEdgEZXqS2T3WMvreZ-UAKvRIfqAJ3HUP83pcybdtDD3l/pub?w=1403&amp;h=993)
 
-## Building
+## Drawbacks
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Currently the Vite dev server is not implemented, you have to test using production builds.
