@@ -14,7 +14,7 @@ export const actions = {
 		const data = await request.formData();
 		const text = data.get('text');
         const io = platform?.req.locals.io;
-        io.emit('chat message', text);
+        io?.emit('chat message', text);
 		// console.log('text', text);
 	},
 } satisfies Actions;

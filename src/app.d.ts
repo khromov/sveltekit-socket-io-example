@@ -1,4 +1,7 @@
 // See https://kit.svelte.dev/docs/types#app
+
+import type { Server } from "socket.io";
+
 // for information about these interfaces
 declare global {
 	namespace App {
@@ -8,7 +11,7 @@ declare global {
 		interface Platform {
 			req: {
 				locals: {
-					io: any;
+					io: Server;
 				}
 			}
 		}
