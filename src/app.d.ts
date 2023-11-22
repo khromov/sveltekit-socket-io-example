@@ -5,7 +5,13 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface Platform {}
+		interface Platform {
+			req: {
+				locals: {
+					io: any;
+				}
+			}
+		}
 	}
 }
 
