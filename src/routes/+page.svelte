@@ -18,7 +18,7 @@
         // TODO: Disconnect client
     });
 
-    const onTest = () => {
+    const fromClientMessage = () => {
         console.log("test");
         c.emit("chat message", Math.random());
     };
@@ -28,7 +28,9 @@
     <title>Socket.IO chat</title>
 </svelte:head>
 
-<input type="button" value="Back" on:click={onTest} />
+<!-- This won't work out of the box because we don't forward client messages in server.js
+<input type="button" value="Back" on:click={fromClientMessage} />
+-->
 
 <div>
     <ul id="messages">

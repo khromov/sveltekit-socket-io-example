@@ -14,10 +14,10 @@ npm run server
 
 ## Differences vs Socket.io demo
 
-The difference between this demo and the Socket.io one is that this demo sends messages through SvelteKit Form Actions. This allows you to do things such as validate messages on the server side or reject them altogether before emitting them.
+The difference between this demo and the Socket.io one is that this demo sends messages through SvelteKit Form Actions instead of directly through Socket.io. This allows you to do things such as validate messages on the server side or reject them altogether before emitting them while still being able to import anything using Vite (such as `$lib` imports, etc)
 
 ![Graph](https://docs.google.com/drawings/d/e/2PACX-1vReOydmfGsqdOgKXOXBAEMWTkisGGIk5YMrEdgEZXqS2T3WMvreZ-UAKvRIfqAJ3HUP83pcybdtDD3l/pub?w=1403&amp;h=993)
 
 ## Drawbacks
 
-Currently the Vite dev server is not implemented, you have to test using production builds.
+Currently the Vite dev server is not implemented, you have to test using production builds. 

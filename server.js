@@ -6,7 +6,7 @@ import http from 'http';
 const io = new Server();
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('A user connected!');
     /* If you uncomment this clients will be able to send messages directly */
     /*
     socket.on('chat message', (msg) => {
