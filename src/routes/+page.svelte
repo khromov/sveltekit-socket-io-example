@@ -13,11 +13,11 @@
         c.on("chat message", (msg) => {
             messages = [...messages, msg];
         });
-    });
 
-    onDestroy(() => {
-        console.log('Destroying');
-        c?.disconnect();
+        return () => {
+            console.log('Unmounting');
+            c?.disconnect();
+        };
     });
 
     const fromClientMessage = () => {
