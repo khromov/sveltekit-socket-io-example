@@ -1,13 +1,4 @@
-import type { PageServerLoad } from './$types';
 import type { Actions } from './$types';
-
-export const load: PageServerLoad = async (event) => {
-    //const io = event?.platform?.req?.locals?.io;
-    //console.log('request', io);
-	return {
-		hello: 'world',
-	};
-};
 
 export const actions = {
 	default: async ({ request, platform }) => {
