@@ -5,6 +5,7 @@ import http from 'http';
 
 const io = new Server();
 
+/*
 io.on('connection', (socket) => {
     console.log('A user connected!');
     /* If you uncomment this clients will be able to send messages directly */
@@ -13,10 +14,9 @@ io.on('connection', (socket) => {
         console.log('message: ' + msg);
         io.emit('chat message', msg);
     });
-    */
+    
 });
-
-
+*/
 
 const app = express();
 const httpServer = http.createServer(app);

@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
     import { enhance } from "$app/forms";
+    import type { Socket } from "socket.io-client";
     import client from "socket.io-client";
     import { onDestroy, onMount } from "svelte";
 
-    let messages = [];
+    let messages: string[] = [];
 
-    let c;
+    let c: Socket;
 
     onMount(() => {
         c = client();
@@ -15,7 +16,8 @@
     });
 
     onDestroy(() => {
-        // TODO: Disconnect client
+        console.log('Destroying');
+        c?.disconnect();
     });
 
     const fromClientMessage = () => {
