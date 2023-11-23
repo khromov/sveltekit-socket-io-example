@@ -2,7 +2,7 @@
     import { enhance } from "$app/forms";
     import type { Socket } from "socket.io-client";
     import client from "socket.io-client";
-    import { onDestroy, onMount } from "svelte";
+    import { onMount } from "svelte";
 
     let messages: string[] = [];
 
